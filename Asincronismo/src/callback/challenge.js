@@ -1,7 +1,7 @@
 //install npm install xmlhttprequest --save
 let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
-let API = "https://rickandmortyapi.com/api/character";
+let API = "https://rickandmortyapi.com/api/character/";
 
 const fetchData = (url_api, callback) => {
 
@@ -26,8 +26,8 @@ const fetchData = (url_api, callback) => {
 fetchData(API, (error1, data1)=>{
 
     if(error1) return console.error(error1);
-    fetchData(API + '/' + data1.results[0].id, (error2, data2)=>{
-        console.log(API + '/' + data1.results[0].id);
+    fetchData(API + data1.results[0].id, (error2, data2)=>{
+        console.log(API + data1.results[0].id);
 
         if(error2) return console.error(error2);
 
