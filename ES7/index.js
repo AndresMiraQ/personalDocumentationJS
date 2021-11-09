@@ -8,6 +8,6 @@ if(letters.includes(c)){
     console.log('Is not found');//Is not found c
 }
 
-//Exponet operator
+//Exponent operator
 
 let result = 2**2; // 4
